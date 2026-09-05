@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/aem-solr-poc/settings/wcm/templates/page-content"
+        jcr:description="AEM development, Cloud migration, search integration, Solr integration, and content management services."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="AEM Services"
+        navTitle="Services"
+        pageTitle="AEM Services"
+        sling:resourceType="aem-solr-poc/components/page">
+        <root jcr:primaryType="nt:unstructured" sling:resourceType="aem-solr-poc/components/container" layout="responsiveGrid">
+            <container jcr:primaryType="nt:unstructured" sling:resourceType="aem-solr-poc/components/container" layout="responsiveGrid">
+                <title jcr:primaryType="nt:unstructured" jcr:title="AEM Services" sling:resourceType="aem-solr-poc/components/title" type="h1"/>
+                <development jcr:primaryType="nt:unstructured" sling:resourceType="aem-solr-poc/components/text" text="&lt;p&gt;Our AEM Development services cover application development, component implementation, and content management solutions for Adobe Experience Manager. We help teams create maintainable digital experiences with a clear content model and reliable authoring workflows.&lt;/p&gt;" textIsRich="true"/>
+                <integration jcr:primaryType="nt:unstructured" sling:resourceType="aem-solr-poc/components/text" text="&lt;p&gt;AEM Cloud Migration services move existing content and applications to Experience Manager Cloud Service. Search Integration and Solr Integration services connect AEM content with Apache Solr so users can find products, services, and published information through fast, relevant search.&lt;/p&gt;" textIsRich="true"/>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

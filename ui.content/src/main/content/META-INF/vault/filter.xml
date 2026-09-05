@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/aem-solr-poc" mode="merge"/>
+    <filter root="/content/aem-solr-poc" mode="merge"/>
+    <filter root="/content/dam/aem-solr-poc" mode="merge">
+        <exclude pattern="/content/dam/aem-solr-poc(/.*)?"/>
+        <include pattern="/content/dam/aem-solr-poc/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/aem-solr-poc/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/aem-solr-poc" mode="merge"/>
+</workspaceFilter>

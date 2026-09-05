@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/aem-solr-poc/settings/wcm/templates/page-content"
+        jcr:description="AEM products for digital experience, content management, Content Fragments, and Experience Manager Cloud Service."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="AEM Products"
+        navTitle="Products"
+        pageTitle="AEM Products"
+        sling:resourceType="aem-solr-poc/components/page">
+        <root jcr:primaryType="nt:unstructured" sling:resourceType="aem-solr-poc/components/container" layout="responsiveGrid">
+            <container jcr:primaryType="nt:unstructured" sling:resourceType="aem-solr-poc/components/container" layout="responsiveGrid">
+                <title jcr:primaryType="nt:unstructured" jcr:title="AEM Products" sling:resourceType="aem-solr-poc/components/title" type="h1"/>
+                <overview jcr:primaryType="nt:unstructured" sling:resourceType="aem-solr-poc/components/text" text="&lt;p&gt;Adobe Experience Manager Sites supports enterprise content management and consistent digital experience delivery. AEM products give teams a central platform to create, govern, publish, and search web content across channels.&lt;/p&gt;" textIsRich="true"/>
+                <capabilities jcr:primaryType="nt:unstructured" sling:resourceType="aem-solr-poc/components/text" text="&lt;p&gt;Content Fragments enable reusable structured content for headless applications, while Experience Manager Cloud Service provides a Cloud-based foundation for scalable authoring and delivery. These AEM capabilities make product content easier to organize, index, and retrieve through a search integration such as Apache Solr.&lt;/p&gt;" textIsRich="true"/>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/aem-solr-poc/settings/wcm/templates/page-content"
+        jcr:description="About AEM Solutions, an organization providing AEM development, Cloud migration, content management, and search solutions."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="About AEM Solutions"
+        navTitle="About Us"
+        pageTitle="About AEM Solutions"
+        sling:resourceType="aem-solr-poc/components/page">
+        <root jcr:primaryType="nt:unstructured" sling:resourceType="aem-solr-poc/components/container" layout="responsiveGrid">
+            <container jcr:primaryType="nt:unstructured" sling:resourceType="aem-solr-poc/components/container" layout="responsiveGrid">
+                <title jcr:primaryType="nt:unstructured" jcr:title="About AEM Solutions" sling:resourceType="aem-solr-poc/components/title" type="h1"/>
+                <organization jcr:primaryType="nt:unstructured" sling:resourceType="aem-solr-poc/components/text" text="&lt;p&gt;AEM Solutions is an organization focused on Adobe Experience Manager development, Cloud migration, and enterprise content management. We combine practical AEM expertise with application development services to help organizations deliver useful digital experiences.&lt;/p&gt;" textIsRich="true"/>
+                <search-solutions jcr:primaryType="nt:unstructured" sling:resourceType="aem-solr-poc/components/text" text="&lt;p&gt;Our search solutions include AEM and Apache Solr integration for content indexing and discovery. By designing content that is meaningful to authors and searchable to users, we support relevant search across AEM products, services, migration guidance, and Cloud content.&lt;/p&gt;" textIsRich="true"/>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>
