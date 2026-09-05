@@ -1,0 +1,5 @@
+{
+    "user.mapping": [
+        "aem-solr-poc.core:solr-service=solr-service"
+    ]
+}

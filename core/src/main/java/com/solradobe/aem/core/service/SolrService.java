@@ -1,7 +1,7 @@
 package com.solradobe.aem.core.service;
 
-import javax.jcr.Node;
-import javax.jcr.RepositoryException;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
@@ -36,20 +36,23 @@ public class SolrService {
 
     public void readPage(String pagePath) {
 
+        Map<String, Object> params = new HashMap<>();
+        params.put(ResourceResolverFactory.SUBSERVICE, "solr-service");
+
         try (ResourceResolver resourceResolver =
-                     resourceResolverFactory.getServiceResourceResolver(null)) {
+                     resourceResolverFactory.getServiceResourceResolver(params)) {
 
             Resource resource = resourceResolver.getResource(pagePath);
 
             if (resource == null) {
-                System.out.println("Page not found: " + pagePath);
+                System.out.println("Resource not found: " + pagePath);
                 return;
             }
 
             PageManager pageManager = resourceResolver.adaptTo(PageManager.class);
 
             if (pageManager == null) {
-                System.out.println("PageManager not available");
+                System.out.println("PageManager is not available");
                 return;
             }
 
@@ -67,7 +70,8 @@ public class SolrService {
             System.out.println("==============================");
 
         } catch (Exception e) {
-            System.out.println("Error reading AEM page: " + e.getMessage());
+            System.out.println("Error reading AEM page: " + pagePath);
+            e.printStackTrace();
         }
     }
 }
